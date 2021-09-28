@@ -1,5 +1,11 @@
 NOTE: my code implements the following operations: ADD, AND, ADDI, ANDI, LW, SW
    - It DOES NOT implement BEQ, J, or JR.
+   
+OpCode Doc:
+ADD: adds the values of two registers, into a third register.
+ADDI: adds a constant (Immediate Value) and the value of a register, into a second register.
+LW: loads a 32 bit value into a register.
+SW: stores a 32 bit value into a register.
 
 One of the Q/A questions was the following:
 

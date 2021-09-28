@@ -1,3 +1,5 @@
+About: Run MIPS progams in Java (single CPU, no Multi-thread, no Pipelining)
+
 NOTE: my code implements the following operations: ADD, AND, ADDI, ANDI, LW, SW
    - It DOES NOT implement BEQ, J, or JR.
 ------

@@ -1,0 +1,21 @@
+NOTE: my code implements the following operations: ADD, AND, ADDI, ANDI, LW, SW
+   - It DOES NOT implement BEQ, J, or JR.
+
+One of the Q/A questions was the following:
+
+---------------------------------------------------
+
+Question: It says we are to distinguish between different register types and instruction types. In the LC3 starter code, the registers were all just stored in an array, which was how I had planned, but should we have different arrays for different types? (i.e. array for return values, array for temp/saved).
+
+Answer: LC3 doesn’t differentiate because if doesn’t have register types although technically you can still create an array of 32 registers to represent the 32 that we have in MIPS. However, we use different numbered registers for different things. $t0 to $t7 from 8 to 15, $s0 to $s7 from 16 to 23, etc. Associating them is an important aspect and perhaps you can use something other than an array.
+
+---------------------------------------------------
+
+
+Because of this, I made a map so that the registers can be accessed by their string values.
+EX: to access $t0, it is done by computer.getRegisterMap().get("$t5").
+
+In addition, because MIPS does PC + 4, I made the instruction memory 800 (to fit 200) and data memory 2000 (to fit 500) long.
+If MIPS only uses every 4th memory location.
+Their might be a way to reduce this size by doing %4, but then it's confusing on whether that should be taken care of on the user side, or by the program itself.
+
